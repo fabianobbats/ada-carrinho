@@ -1,6 +1,6 @@
 export class Api {
   static getProdutos() {
-    return fetch('/src/database/produtos.json', {
+    return fetch('./src/database/produtos.json', {
       method: "GET",
       headers: {
         'content-type': 'application/json'
