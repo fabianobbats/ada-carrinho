@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #007bff;
+  --secondary: #f8f9fa;
+  --success: #28a745;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --info: #17a2b8;
+  --dark: #343a40;
+  --white: #ffffff;
+
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--secondary);
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 100%;
+  gap: 20px;
+  padding: 1rem 0;
+  overflow: auto;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  gap: 20px;
+}
+
+.vitrine {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  overflow: auto;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 180px;
+  height: 250px;
+  padding-top: 0.5rem;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+  background-color: var(--white);
+}
+
+.item:hover {
+  border: 2px solid var(--primary);
+}
+
+.item img {
+  width: 100px;
+  height: 100px;
+}
+
+.item .btn-adicionar {
+  width: 100%;
+  margin-top: auto;
+  padding: 0.5rem;
+  border-radius: 0 0 10px 10px;
+  border: none;
+  background-color: var(--primary);
+  color: var(--white);
+  cursor: pointer;
+
+}
+
+.item .btn-adicionar:hover {
+  opacity: 0.8;
+}
+
+.item .btn-adicionar:active {
+  animation: clickanim 3s ease-out;
+}
+
+.item h4 {
+  padding: 0 0.25rem;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.item h6 {
+  padding: 0 0.25rem;
+  font-weight: 400;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.item h5 {
+  font-weight: 700;
+  padding: 0 0.25rem;
+}
+
+
+
+.carrinhoTitle {
+  background-color: var(--primary);
+  color: var(--white);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 5px 5px 0 0;
+  padding: 10px;
+}
+
+.carrinho {
+  width: 400px;
+  height: 400px;
+  background-color: var(--white);
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  gap: 5px;
+}
+
+.itemCarrinho {
+  background-color: var(--secondary);
+  display: flex;
+  width: 100%;
+  height: 70px;
+  padding: 0.25rem;
+  gap: 10px;
+}
+
+.carrinhoVazio {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemCarrinho img {
+  width: 20%;
+}
+
+.itemCarrinho .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+
+.itemCarrinho .acoes {
+  /* width: 10%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.itemCarrinho .acoes button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.itemCarrinho .acoes .btn-adicionar {
+  background-color: var(--success);
+}
+
+.itemCarrinho .acoes .btn-remover {
+  background-color: var(--danger);
+}
+
+
+.section-totais {
+  background-color: var(--primary);
+  color: white;
+  border-radius: 0 0 10px 10px;
+}
+
+.totais {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+
+}
+
+
+
+
+@keyframes clickanim {
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
